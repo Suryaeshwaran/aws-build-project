@@ -1,6 +1,11 @@
 version: 0.0
 os: linux
 
+files:
+  - source: /
+    destination: /path/to/destination
+    file_exists_behavior: OVERWRITE
+
 hooks:
   ApplicationStop:
     - location: scripts/stop_container.sh
